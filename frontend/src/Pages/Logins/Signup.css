@@ -1,0 +1,86 @@
+/* Apply these styles specifically for the signup page */
+.signup-container {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.9);
+  }
+  
+  /* Container for the signup form */
+  .signup-form {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Title styles */
+  .signup-form h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  /* Error message styles */
+  .signup-form p {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  /* Form input styles */
+  .signup-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-form input:focus {
+    background-color: rgba(255, 255, 255, 0.627);
+  }
+  
+  /* Button styles */
+  .signup-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #53705b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .signup-form {
+      width: 90%;
+      padding: 20px;
+    }
+  }
+  

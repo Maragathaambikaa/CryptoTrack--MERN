@@ -1,0 +1,158 @@
+/* Home.css */
+
+/* Container for the Home page */
+.home-container {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #54637a, #c3cfe2);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Header section */
+.home-container h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Table styles */
+.home-container table {
+  width: 90%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-container thead {
+  background-color: #003365;
+  color: white;
+}
+
+.home-container th, .home-container td {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for table rows */
+.home-container tr:hover {
+  background-color: rgba(30, 144, 255, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+/* Scrolling text effect for crypto names */
+.home-container a {
+  text-decoration: none;
+  color: #00254b;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.home-container a::before {
+  content: "➡️";
+  position: absolute;
+  left: -25px;
+  animation: scrollText 4s linear infinite;
+}
+
+/* Rotating text animation for crypto names */
+@keyframes scrollText {
+  0% {
+    left: -25px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Price and Market Cap Animation */
+.home-container td:nth-child(3), .home-container td:nth-child(4) {
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.home-container td:nth-child(3):hover, .home-container td:nth-child(4):hover {
+  color: #002243;
+}
+
+/* Price Change Indicator (Green/Red) */
+.home-container td:nth-child(5) {
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.home-container td:nth-child(5):hover {
+  color: #ff6347;
+}
+
+/* Total Value Section */
+.home-container .total-value {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  color: #333;
+  transition: transform 0.3s ease-in-out;
+}
+
+.home-container .total-value:hover {
+  transform: scale(1.05);
+  color: #ff6347;
+}
+
+/* Loading State */
+.home-container p {
+  font-size: 1.2rem;
+  color: #333;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Fade-in effect for headings and content */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animated Background */
+@keyframes animatedBackground {
+  0% {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  }
+  50% {
+    background: linear-gradient(135deg, #c3cfe2, #f5f7fa);
+  }
+  100% {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  }
+}
+
+/* Apply the animation to the body only within the home container */
+.home-container {
+  animation: animatedBackground 10s infinite;
+}

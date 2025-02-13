@@ -1,0 +1,149 @@
+/* General Styling */
+.news-container {
+  text-align: center;
+  padding: 3rem 2rem;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f9f9f9 0%, #f0f4f8 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* News Title */
+.news-container h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* News Ticker */
+.news-ticker {
+  width: 100%;
+  background: #002850;
+  color: white;
+  padding: 12px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-align: center;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.ticker-content {
+  display: flex;
+  animation: ticker-scroll 40s linear infinite;
+}
+
+.ticker-item {
+  display: inline;
+  margin-right: 30px;
+  padding: 0 10px;
+  color: white;
+  text-transform: capitalize;
+}
+
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* News List */
+.news-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.news-list li {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.news-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.news-item h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  text-transform: capitalize;
+}
+
+.news-item p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.news-item a {
+  color: #002b55;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.news-item a:hover {
+  color: #002c5a;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .news-container h2 {
+    font-size: 2rem;
+  }
+
+  .news-list {
+    grid-template-columns: 1fr;
+  }
+
+  .news-item h3 {
+    font-size: 1.4rem;
+  }
+
+  .news-item p {
+    font-size: 1rem;
+  }
+}
+
+/* Animation and Hover Effects for the Ticker */
+.ticker-content {
+  display: flex;
+  animation: ticker-scroll 50s linear infinite;
+  padding-left: 10px;  /* Adds slight padding for visual effect */
+}
+
+.ticker-item {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  margin-right: 30px;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}

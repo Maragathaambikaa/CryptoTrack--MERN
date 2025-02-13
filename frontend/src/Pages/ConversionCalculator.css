@@ -1,0 +1,26 @@
+.conversion-calculator {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .form {
+    margin: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #2c4055;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #02304d;
+  }
+  
+  .result {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  

@@ -1,0 +1,99 @@
+/* Common Background Overlay for All Pages */
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(1.2);
+    position: relative;
+  }
+  
+  /* Overlay effect */
+  .page-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(68, 67, 67, 0.5);
+  }
+  
+  /* Content container */
+  .page-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+  
+  .page-content h1 {
+    font-size: 36px;
+    color:white;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .page-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Social Media Icons for Contact Page */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #005d03; /* Color for hover effect */
+  }
+  
+  .material-icons {
+    font-size: 36px;
+  }
+  
+  /* Specific background images for each page */
+  .about-page {
+    background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+  
+  .contact-page {
+    background-image: url('https://images.unsplash.com/photo-1640833906651-6bd1af7aeea3?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+  
+  .privacy-page {
+    background-image: url('https://cdn.pixabay.com/photo/2021/05/24/09/06/bitcoin-6278312_960_720.jpg');
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .page-content {
+      padding: 15px;
+      width: 90%;
+    }
+  
+    .page-content h1 {
+      font-size: 28px;
+    }
+  
+    .page-content p {
+      font-size: 16px;
+    }
+  }
+  

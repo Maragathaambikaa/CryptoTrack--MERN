@@ -1,0 +1,224 @@
+/* Ensure styles are scoped to .landing-page */
+.landing-page {
+    width: 100%;
+    text-align: center;
+    font-family: 'Saira Stencil', cursive !important;
+    background-color: #000;  /* Ensure the landing page background is dark */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;  /* Ensure full-page height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* Welcome Page (Initial Screen) */
+  .welcome-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(249, 244, 244);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+    background-image: url("https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    filter: brightness(0.8);
+  }
+
+  .welcome-page h1{
+    color:#000000;
+    text-align: center;
+    font-weight:300px;
+  }
+
+  .welcome-page p{
+    color:#080808;
+    font-weight:100px;
+    text-align: center;
+  }
+  
+  /* Header Section (Video Background) */
+  .landing-page .landing-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+  }
+  
+  .landing-page video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .landing-page h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-weight: 750 !important;
+    font-size: 10vw !important;
+    text-transform: uppercase;
+    background-color: #f9f7f7!important;
+    mix-blend-mode: screen;
+    z-index: 2;
+  }
+  
+  /* Overlay */
+  .landing-page .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  /* Info Section (Below Video) */
+  .info-section {
+    position: relative;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+    border-radius: 15px;
+    max-width: 80%;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+  }
+
+  .info-section p{
+    font-size: large;
+  }
+  
+  /* Features Section (Full Width Sections) */
+  .features {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; /* Ensure features cover the full page */
+    background-color: #1a1a1a; /* Ensure dark background */
+  }
+  
+  /* Individual Feature Items */
+  .feature-item {
+    width: 100%;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+    background-color: #333;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .feature-background {
+    padding: 20px;
+  }
+  
+  .feature-background h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .feature-background p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+  
+  /* Feature Color Gradients */
+  .track {
+    background: linear-gradient(135deg, #394649, #223d54);
+  }
+  
+  .portfolio {
+    background: linear-gradient(135deg, #3b342a, #392412);
+  }
+  
+  .news {
+    background: linear-gradient(135deg, #625a65, #601c7c);
+  }
+  
+  /* CTA Button Styling */
+  .cta-button {
+    background-color: #53705b;
+    color: rgb(247, 244, 244);
+    font-size: 1.3rem;
+    padding: 18px 45px;   
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  .cta-button:hover {
+    background: #b85a07;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .features {
+      margin-top: 30px;
+    }
+  
+    .feature-item {
+      padding: 60px 20px;
+    }
+  
+    .feature-background h3 {
+      font-size: 1.8rem;
+    }
+  
+    .feature-background p {
+      font-size: 1rem;
+    }
+  
+    .cta-button {
+      font-size: 1rem;
+      padding: 10px 30px;
+    }
+  }
+  

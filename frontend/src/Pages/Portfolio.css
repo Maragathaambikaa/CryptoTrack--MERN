@@ -1,0 +1,250 @@
+/* Portfolio.css */
+
+/* General Container */
+.portfolio-container {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 40px auto;
+    animation: fadeIn 1s ease-out;
+    position: relative; /* Ensure container is the reference point for coin positioning */
+}
+
+/* Title Styles */
+.portfolio-title {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* Add Coin & Set Alert Sections */
+.add-coin-container,
+.set-alert-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.5s ease-out;
+}
+
+.add-coin-container select,
+.set-alert-container select,
+.add-coin-container input,
+.set-alert-container input {
+    width: 48%;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #53705b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3e5a47;
+}
+
+/* Alerts Section */
+.alerts-list {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.alerts-list h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.alerts-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.alerts-list li {
+    background-color: #e5e5e5;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.alerts-list li:hover {
+    transform: translateX(10px);
+}
+
+.alerts-list li:active {
+    transform: translateX(0);
+}
+
+/* Portfolio List */
+.portfolio-list {
+    margin-top: 40px;
+}
+
+.portfolio-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.portfolio-list li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-list li:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-list button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-list button:hover {
+    background-color: #cc3333;
+}
+
+/* Portfolio Total Value */
+.total-value {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    text-align: right;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Error & Message */
+.error,
+.message {
+    color: #ff4d4d;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.message {
+    color: #53705b;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Coin Rotation Animation */
+.coin-rotate {
+    position: absolute;
+    top: 50%;
+    left: -60px; /* Start position on the left side */
+    transform: translateY(-50%);
+    font-size: 3rem; /* Adjust the size of the coin icon */
+    animation: rotateCoin 4s infinite linear;
+    z-index: -1;
+}
+
+.coin-rotate-right {
+    position: absolute;
+    top: 50%;
+    right: -60px; /* Start position on the right side */
+    transform: translateY(-50%);
+    font-size: 3rem; /* Adjust the size of the coin icon */
+    animation: rotateCoinRight 4s infinite linear;
+    z-index: -1;
+}
+
+/* Keyframe for rotating coin */
+@keyframes rotateCoin {
+    0% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+@keyframes rotateCoinRight {
+    0% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-50%) rotate(-360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .add-coin-container,
+    .set-alert-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .add-coin-container select,
+    .set-alert-container select,
+    .add-coin-container input,
+    .set-alert-container input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .portfolio-title {
+        font-size: 2rem;
+    }
+
+    .portfolio-list li {
+        flex-direction: column;
+    }
+}

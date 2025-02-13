@@ -1,0 +1,201 @@
+/* Define some reusable color variables */
+:root {
+    --primary-color: #2a9d8f;
+    --secondary-color: #264653;
+    --highlight-color: #e76f51;
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --hover-color: #1a5a5f;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: #f0f0f0;
+    --font-family: 'Arial', sans-serif;
+  }
+  
+  /* Wrapper for the pages to add some common spacing */
+  .page-wrapper {
+    padding: 30px;
+    margin-top: 30px;
+    background-color: var(--bg-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 12px var(--shadow-color);
+    animation: fadeIn 1s ease-out;
+    max-width: 1200px;
+    margin: 30px auto;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /* Heading styles for all pages */
+  .page-wrapper h1 {
+    font-size: 2.8rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  /* Subheading styles */
+  .page-wrapper h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--border-color);
+    padding-bottom: 10px;
+    font-family: var(--font-family);
+    font-weight: 600;
+  }
+  
+  /* Paragraph text */
+  .page-wrapper p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: justify;
+    font-family: var(--font-family);
+  }
+  
+  /* Links to navigate through the pages */
+  .page-wrapper a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .page-wrapper a:hover {
+    color: var(--highlight-color);
+    transform: translateY(-3px);
+  }
+  
+  /* FAQ specific styles */
+  .faq .question {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+  }
+  
+  .faq .question:hover {
+    color: var(--primary-color);
+  }
+  
+  .faq .answer {
+    margin-left: 20px;
+    font-style: italic;
+    margin-bottom: 25px;
+    color: #666;
+    font-size: 1.05rem;
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  /* Terms page specific styling */
+  .terms .section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: all 0.3s ease;
+  }
+  
+  .terms .section:hover {
+    box-shadow: 0 8px 16px var(--shadow-color);
+  }
+  
+  .terms .section h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-family: var(--font-family);
+  }
+  
+  .terms .section p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  /* Support page specific styling */
+  .support .support-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: all 0.3s ease;
+  }
+  
+  .support .support-item:hover {
+    box-shadow: 0 8px 16px var(--shadow-color);
+  }
+  
+  .support .support-item h3 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+  }
+  
+  .support .support-item p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  /* Resources page specific styling */
+  .resources .resource-item {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: all 0.3s ease;
+  }
+  
+  .resources .resource-item a {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    font-weight: 500;
+  }
+  
+  .resources .resource-item a:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
+  }
+  
+  .resources .resource-item:hover {
+    box-shadow: 0 8px 16px var(--shadow-color);
+  }
+  
+  /* Pagination or additional info on resources, terms, etc */
+  .page-wrapper .pagination {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .page-wrapper .pagination a {
+    margin: 0 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .page-wrapper .pagination a:hover {
+    color: var(--highlight-color);
+    transform: translateY(-2px);
+  }
+  
+  /* Add smooth scroll to anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
